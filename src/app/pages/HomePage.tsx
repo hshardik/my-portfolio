@@ -5,6 +5,7 @@ import { PageTransition } from "../components/PageTransition";
 import { HoverCard } from "../components/HoverCard";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { ContactSection } from "../components/sections/ContactSection";
+import { usePageTitle } from "../hooks/usePageTitle";
 import imgPhoto1 from "../../imports/Home-1/Hardik_Home.jpg";
 import imgThumbnail from "../../imports/Home-1/Knowslope.png";
 import imgFrame from "../../imports/Home-1/FieldRails.png";
@@ -60,6 +61,7 @@ function ProjectCardText({ title, emoji, description, tags, onClick }: { title: 
 }
 
 export function HomePage() {
+  usePageTitle("Hardik Shukla — Product, Data & Strategy", true);
   const navigate = useNavigate();
 
   return (
